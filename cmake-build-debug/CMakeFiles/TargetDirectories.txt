@@ -1,0 +1,3 @@
+I:/LearnOpengl/cmake-build-debug/CMakeFiles/LearnOpengl.dir
+I:/LearnOpengl/cmake-build-debug/CMakeFiles/edit_cache.dir
+I:/LearnOpengl/cmake-build-debug/CMakeFiles/rebuild_cache.dir
