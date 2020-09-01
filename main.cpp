@@ -69,14 +69,71 @@
         // Build and compile our shader program
         Shader ourShader("../shader.vs", "../shader.frag");
 
-        // Set up vertex data (and buffer(s)) and attribute pointers
-        GLfloat vertices[] = {
-                // Positions          // Colors           // Texture Coords
-                0.5f,  0.5f, 0.0f,   1.0f, 0.0f, 0.0f,   2.0f, 2.0f, // Top Right
-                0.5f, -0.5f, 0.0f,   0.0f, 1.0f, 0.0f,   2.0f, 0.0f, // Bottom Right
-                -0.5f, -0.5f, 0.0f,   0.0f, 0.0f, 1.0f,   0.0f, 0.0f, // Bottom Left
-                -0.5f,  0.5f, 0.0f,   1.0f, 1.0f, 0.0f,   0.0f, 2.0f  // Top Left
+        glm::vec3 cubePositions[] = {
+                glm::vec3( 0.0f,  0.0f,  0.0f),
+                glm::vec3( 2.0f,  5.0f, -15.0f),
+                glm::vec3(-1.5f, -2.2f, -2.5f),
+                glm::vec3(-3.8f, -2.0f, -12.3f),
+                glm::vec3( 2.4f, -0.4f, -3.5f),
+                glm::vec3(-1.7f,  3.0f, -7.5f),
+                glm::vec3( 1.3f, -2.0f, -2.5f),
+                glm::vec3( 1.5f,  2.0f, -2.5f),
+                glm::vec3( 1.5f,  0.2f, -1.5f),
+                glm::vec3(-1.3f,  1.0f, -1.5f)
         };
+
+        // Set up vertex data (and buffer(s)) and attribute pointers
+        float vertices[] = {
+                -0.5f, -0.5f, -0.5f, 1.0f, 0.0f, 0.0f,  0.0f, 0.0f,
+                0.5f, -0.5f, -0.5f,  1.0f, 0.0f, 0.0f, 1.0f, 0.0f,
+                0.5f,  0.5f, -0.5f,  1.0f, 0.0f, 0.0f, 1.0f, 1.0f,
+                0.5f,  0.5f, -0.5f,  1.0f, 0.0f, 0.0f, 1.0f, 1.0f,
+                -0.5f,  0.5f, -0.5f,  1.0f, 0.0f, 0.0f, 0.0f, 1.0f,
+                -0.5f, -0.5f, -0.5f,  1.0f, 0.0f, 0.0f, 0.0f, 0.0f,
+
+                -0.5f, -0.5f,  0.5f, 1.0f, 0.0f, 0.0f,  0.0f, 0.0f,
+                0.5f, -0.5f,  0.5f,  1.0f, 0.0f, 0.0f, 1.0f, 0.0f,
+                0.5f,  0.5f,  0.5f,  1.0f, 0.0f, 0.0f, 1.0f, 1.0f,
+                0.5f,  0.5f,  0.5f,  1.0f, 0.0f, 0.0f, 1.0f, 1.0f,
+                -0.5f,  0.5f,  0.5f,  1.0f, 0.0f, 0.0f, 0.0f, 1.0f,
+                -0.5f, -0.5f,  0.5f, 1.0f, 0.0f, 0.0f,  0.0f, 0.0f,
+
+                -0.5f,  0.5f,  0.5f, 1.0f, 0.0f, 0.0f,  1.0f, 0.0f,
+                -0.5f,  0.5f, -0.5f,  1.0f, 0.0f, 0.0f, 1.0f, 1.0f,
+                -0.5f, -0.5f, -0.5f,  1.0f, 0.0f, 0.0f, 0.0f, 1.0f,
+                -0.5f, -0.5f, -0.5f,  1.0f, 0.0f, 0.0f, 0.0f, 1.0f,
+                -0.5f, -0.5f,  0.5f,  1.0f, 0.0f, 0.0f, 0.0f, 0.0f,
+                -0.5f,  0.5f,  0.5f,  1.0f, 0.0f, 0.0f, 1.0f, 0.0f,
+
+                0.5f,  0.5f,  0.5f,  1.0f, 0.0f, 0.0f, 1.0f, 0.0f,
+                0.5f,  0.5f, -0.5f,  1.0f, 0.0f, 0.0f, 1.0f, 1.0f,
+                0.5f, -0.5f, -0.5f,  1.0f, 0.0f, 0.0f, 0.0f, 1.0f,
+                0.5f, -0.5f, -0.5f,  1.0f, 0.0f, 0.0f, 0.0f, 1.0f,
+                0.5f, -0.5f,  0.5f,  1.0f, 0.0f, 0.0f, 0.0f, 0.0f,
+                0.5f,  0.5f,  0.5f,  1.0f, 0.0f, 0.0f, 1.0f, 0.0f,
+
+                -0.5f, -0.5f, -0.5f,  1.0f, 0.0f, 0.0f, 0.0f, 1.0f,
+                0.5f, -0.5f, -0.5f,  1.0f, 0.0f, 0.0f, 1.0f, 1.0f,
+                0.5f, -0.5f,  0.5f,  1.0f, 0.0f, 0.0f, 1.0f, 0.0f,
+                0.5f, -0.5f,  0.5f,  1.0f, 0.0f, 0.0f, 1.0f, 0.0f,
+                -0.5f, -0.5f,  0.5f,  1.0f, 0.0f, 0.0f, 0.0f, 0.0f,
+                -0.5f, -0.5f, -0.5f,  1.0f, 0.0f, 0.0f, 0.0f, 1.0f,
+
+                -0.5f,  0.5f, -0.5f, 1.0f, 0.0f, 0.0f,  0.0f, 1.0f,
+                0.5f,  0.5f, -0.5f,  1.0f, 0.0f, 0.0f, 1.0f, 1.0f,
+                0.5f,  0.5f,  0.5f,  1.0f, 0.0f, 0.0f, 1.0f, 0.0f,
+                0.5f,  0.5f,  0.5f,  1.0f, 0.0f, 0.0f, 1.0f, 0.0f,
+                -0.5f,  0.5f,  0.5f,  1.0f, 0.0f, 0.0f, 0.0f, 0.0f,
+                -0.5f,  0.5f, -0.5f,  1.0f, 0.0f, 0.0f, 0.0f, 1.0f
+        };
+
+//        GLfloat vertices[] = {
+//                // Positions          // Colors           // Texture Coords
+//                0.5f,  0.5f, 0.0f,   1.0f, 0.0f, 0.0f,   2.0f, 2.0f, // Top Right
+//                0.5f, -0.5f, 0.0f,   0.0f, 1.0f, 0.0f,   2.0f, 0.0f, // Bottom Right
+//                -0.5f, -0.5f, 0.0f,   0.0f, 0.0f, 1.0f,   0.0f, 0.0f, // Bottom Left
+//                -0.5f,  0.5f, 0.0f,   1.0f, 1.0f, 0.0f,   0.0f, 2.0f  // Top Left
+//        };
 
         GLuint indices[] = {  // Note that we start from 0!
                 0, 1, 3,  // First Triangle
@@ -155,6 +212,8 @@
         glGetIntegerv(GL_MAX_VERTEX_ATTRIBS, &nrAttributes);
         std::cout << "Maximum nr of vertex attributes supported: " << nrAttributes << std::endl;
 
+        glEnable(GL_DEPTH_TEST);
+
         // Game loop
         while (!glfwWindowShouldClose(window))
         {
@@ -163,8 +222,8 @@
 
             // Render
             // Clear the colorbuffer
-            glClearColor(0, 0, 1.0f, 1.0f);
-            glClear(GL_COLOR_BUFFER_BIT);
+            glClearColor(0.3f, 0.2f, 0.3f, 1.0f);
+            glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
             // Draw the triangle
             ourShader.Use();
@@ -181,19 +240,61 @@
             GLint offect = glGetUniformLocation(ourShader.Program, "xOffset");
             glUniform1f(offect,greenValue);
 
-            // Create transformation
-            glm::mat4 transform(1.0f);
+            glm::mat4 model(1.0);
+            model = glm::rotate(model,glm::radians(-55.0f),glm::vec3(1.0f,0.0f,0.0f));
 
-            transform = glm::translate(transform, glm::vec3(0.5f, -0.5f, 0.0f));
-            transform = glm::rotate(transform, (GLfloat)glfwGetTime() * 10.0f, glm::vec3(0.0f, 0.0f, 1.0f));
+            glm::mat4 view(1.0f);
+            // 注意，我们将矩阵向我们要进行移动场景的反方向移动。
+            view = glm::translate(view, glm::vec3(0.0f, 0.0f, -3.5f));
 
-            // Get matrix's uniform location and set matrix
-            GLint transformLoc = glGetUniformLocation(ourShader.Program, "transform");
-            glUniformMatrix4fv(transformLoc, 1, GL_FALSE, glm::value_ptr(transform));
+            glm::mat4 projection(1.0f);
+            float  width = (float )800;
+            float  height = (float )600;
+            projection = glm::perspective(glm::radians(45.0f), width / height, 0.1f, 100.0f);
 
-            glBindVertexArray(VAO);
-            glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
-            glBindVertexArray(0);
+            int modelLoc = glGetUniformLocation(ourShader.Program, "model");
+            glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+
+            int viewLoc = glGetUniformLocation(ourShader.Program, "view");
+            glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
+
+            int projectLoc = glGetUniformLocation(ourShader.Program, "projection");
+            glUniformMatrix4fv(projectLoc, 1, GL_FALSE, glm::value_ptr(projection));
+
+//            // Create transformation
+//            glm::mat4 transform(1.0f);
+//            transform = glm::translate(transform, glm::vec3(0.5f, -0.5f, 0.0f));
+//            transform = glm::rotate(transform, (GLfloat)glfwGetTime() * 10.0f, glm::vec3(0.0f, 0.0f, 1.0f));
+//            // Get matrix's uniform location and set matrix
+//            GLint transformLoc = glGetUniformLocation(ourShader.Program, "transform");
+//            glUniformMatrix4fv(transformLoc, 1, GL_FALSE, glm::value_ptr(transform));
+
+            for(unsigned int i = 0; i < 10; i++)
+            {
+                glBindVertexArray(VAO);
+                glm::mat4 model(1.0f);
+                model = glm::translate(model, cubePositions[i]);
+                float angle = 20.0f * i;
+
+                if(i%3 == 0)
+                {
+                    angle = glfwGetTime() * 25.0f;
+                }
+
+                model = glm::rotate(model, glm::radians(angle), glm::vec3(1.0f, 0.3f, 0.5f));
+                int modelLoc = glGetUniformLocation(ourShader.Program, "model");
+                glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+
+                glDrawArrays(GL_TRIANGLES, 0, 36);
+                //glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+                glBindVertexArray(0);
+
+            }
+
+//            glBindVertexArray(VAO);
+//            glDrawArrays(GL_TRIANGLES, 0, 36);
+//            //glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+//            glBindVertexArray(0);
 
     //        // Draw our first triangle
     //        glUseProgram(shaderProgram);
