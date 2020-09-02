@@ -16,11 +16,22 @@
     #include <glm/gtc/matrix_transform.hpp>
     #include <glm/gtc/type_ptr.hpp>
 
+    #include "Camera.h"
     // Function prototypes
     void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode);
+    void mouse_callback(GLFWwindow* window, double xpos, double ypos);
+    void scroll_callback(GLFWwindow* window, double xoffset, double yoffset);
+    void processInput(GLFWwindow *window);
+
 
     // Window dimensions
     const GLuint WIDTH = 800, HEIGHT = 600;
+
+    Camera camera = Camera();
+
+    // timing
+    float deltaTime = 0.0f;	// time between current frame and last frame
+    float lastFrame = 0.0f;
 
     // The MAIN function, from here we start the application and run the game loop
     int main()
@@ -42,9 +53,15 @@
             glfwTerminate();
             return -1;
         }
+
+
+
         glfwMakeContextCurrent(window);
         // Set the required callback functions
         glfwSetKeyCallback(window, key_callback);
+
+        glfwSetCursorPosCallback(window, mouse_callback);
+        glfwSetScrollCallback(window, scroll_callback);
 
         // Set this to true so GLEW knows to use a modern approach to retrieving function pointers and extensions
         glewExperimental = GL_TRUE;
@@ -217,6 +234,12 @@
         // Game loop
         while (!glfwWindowShouldClose(window))
         {
+            float currentFrame = glfwGetTime();
+            deltaTime = currentFrame - lastFrame;
+            lastFrame = currentFrame;
+
+            processInput(window);
+
             // Check if any events have been activiated (key pressed, mouse moved etc.) and call corresponding response functions
             glfwPollEvents();
 
@@ -244,13 +267,12 @@
             model = glm::rotate(model,glm::radians(-55.0f),glm::vec3(1.0f,0.0f,0.0f));
 
             glm::mat4 view(1.0f);
-            // 注意，我们将矩阵向我们要进行移动场景的反方向移动。
-            view = glm::translate(view, glm::vec3(0.0f, 0.0f, -3.5f));
+            view = camera.GetViewMatrix();
 
             glm::mat4 projection(1.0f);
             float  width = (float )800;
             float  height = (float )600;
-            projection = glm::perspective(glm::radians(45.0f), width / height, 0.1f, 100.0f);
+            projection = glm::perspective(glm::radians(camera.Zoom), width / height, 0.1f, 100.0f);
 
             int modelLoc = glGetUniformLocation(ourShader.Program, "model");
             glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
@@ -323,4 +345,67 @@
         std::cout << key << std::endl;
         if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
             glfwSetWindowShouldClose(window, GL_TRUE);
+    }
+
+    Camera_Movement cameraMovement;
+
+    // process all input: query GLFW whether relevant keys are pressed/released this frame and react accordingly
+// ---------------------------------------------------------------------------------------------------------
+    void processInput(GLFWwindow *window)
+    {
+        if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
+            glfwSetWindowShouldClose(window, true);
+
+        if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
+        {
+            cameraMovement = FORWARD;
+            camera.ProcessKeyboard(cameraMovement,deltaTime);
+        }
+
+        if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
+        {
+            cameraMovement = BACKWARD;
+            camera.ProcessKeyboard(cameraMovement,deltaTime);
+        }
+
+        if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
+        {
+            cameraMovement = LEFT;
+            camera.ProcessKeyboard(cameraMovement,deltaTime);
+        }
+
+        if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
+        {
+            cameraMovement = RIGHT;
+            camera.ProcessKeyboard(cameraMovement,deltaTime);
+        }
+
+
+    }
+
+    bool firstMouse = true;
+    float lastX =  800.0f / 2.0;
+    float lastY =  600.0 / 2.0;
+    void mouse_callback(GLFWwindow* window, double xpos, double ypos)
+    {
+        if (firstMouse)
+        {
+            lastX = xpos;
+            lastY = ypos;
+            firstMouse = false;
+        }
+
+        float xoffset = xpos - lastX;
+        float yoffset = lastY - ypos; // reversed since y-coordinates go from bottom to top
+        lastX = xpos;
+        lastY = ypos;
+
+        camera.ProcessMouseMovement(xoffset,yoffset);
+    }
+
+// glfw: whenever the mouse scroll wheel scrolls, this callback is called
+// ----------------------------------------------------------------------
+    void scroll_callback(GLFWwindow* window, double xoffset, double yoffset)
+    {
+        camera.ProcessMouseScroll(yoffset);
     }
