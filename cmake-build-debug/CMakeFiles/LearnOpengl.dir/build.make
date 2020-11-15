@@ -47,10 +47,10 @@ RM = "D:\Program Files\JetBrains\CLion 2020.1.1\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = I:\LearnOpengl
+CMAKE_SOURCE_DIR = D:\_GitSpace\LearnOpengl
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = I:\LearnOpengl\cmake-build-debug
+CMAKE_BINARY_DIR = D:\_GitSpace\LearnOpengl\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles\LearnOpengl.dir\depend.make
@@ -61,41 +61,63 @@ include CMakeFiles\LearnOpengl.dir\progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles\LearnOpengl.dir\flags.make
 
-CMakeFiles\LearnOpengl.dir\main.cpp.obj: CMakeFiles\LearnOpengl.dir\flags.make
-CMakeFiles\LearnOpengl.dir\main.cpp.obj: ..\main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=I:\LearnOpengl\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/LearnOpengl.dir/main.cpp.obj"
+CMakeFiles\LearnOpengl.dir\Main.cpp.obj: CMakeFiles\LearnOpengl.dir\flags.make
+CMakeFiles\LearnOpengl.dir\Main.cpp.obj: ..\Main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\_GitSpace\LearnOpengl\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/LearnOpengl.dir/Main.cpp.obj"
 	C:\PROGRA~2\MICROS~1\2017\PROFES~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\LearnOpengl.dir\main.cpp.obj /FdCMakeFiles\LearnOpengl.dir\ /FS -c I:\LearnOpengl\main.cpp
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\LearnOpengl.dir\Main.cpp.obj /FdCMakeFiles\LearnOpengl.dir\ /FS -c D:\_GitSpace\LearnOpengl\Main.cpp
 <<
 
-CMakeFiles\LearnOpengl.dir\main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LearnOpengl.dir/main.cpp.i"
-	C:\PROGRA~2\MICROS~1\2017\PROFES~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe > CMakeFiles\LearnOpengl.dir\main.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E I:\LearnOpengl\main.cpp
+CMakeFiles\LearnOpengl.dir\Main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LearnOpengl.dir/Main.cpp.i"
+	C:\PROGRA~2\MICROS~1\2017\PROFES~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe > CMakeFiles\LearnOpengl.dir\Main.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\_GitSpace\LearnOpengl\Main.cpp
 <<
 
-CMakeFiles\LearnOpengl.dir\main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LearnOpengl.dir/main.cpp.s"
+CMakeFiles\LearnOpengl.dir\Main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LearnOpengl.dir/Main.cpp.s"
 	C:\PROGRA~2\MICROS~1\2017\PROFES~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\LearnOpengl.dir\main.cpp.s /c I:\LearnOpengl\main.cpp
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\LearnOpengl.dir\Main.cpp.s /c D:\_GitSpace\LearnOpengl\Main.cpp
+<<
+
+CMakeFiles\LearnOpengl.dir\glad.c.obj: CMakeFiles\LearnOpengl.dir\flags.make
+CMakeFiles\LearnOpengl.dir\glad.c.obj: ..\glad.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\_GitSpace\LearnOpengl\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/LearnOpengl.dir/glad.c.obj"
+	C:\PROGRA~2\MICROS~1\2017\PROFES~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe @<<
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoCMakeFiles\LearnOpengl.dir\glad.c.obj /FdCMakeFiles\LearnOpengl.dir\ /FS -c D:\_GitSpace\LearnOpengl\glad.c
+<<
+
+CMakeFiles\LearnOpengl.dir\glad.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/LearnOpengl.dir/glad.c.i"
+	C:\PROGRA~2\MICROS~1\2017\PROFES~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe > CMakeFiles\LearnOpengl.dir\glad.c.i @<<
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\_GitSpace\LearnOpengl\glad.c
+<<
+
+CMakeFiles\LearnOpengl.dir\glad.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LearnOpengl.dir/glad.c.s"
+	C:\PROGRA~2\MICROS~1\2017\PROFES~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe @<<
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\LearnOpengl.dir\glad.c.s /c D:\_GitSpace\LearnOpengl\glad.c
 <<
 
 # Object files for target LearnOpengl
 LearnOpengl_OBJECTS = \
-"CMakeFiles\LearnOpengl.dir\main.cpp.obj"
+"CMakeFiles\LearnOpengl.dir\Main.cpp.obj" \
+"CMakeFiles\LearnOpengl.dir\glad.c.obj"
 
 # External object files for target LearnOpengl
 LearnOpengl_EXTERNAL_OBJECTS =
 
-LearnOpengl.exe: CMakeFiles\LearnOpengl.dir\main.cpp.obj
+LearnOpengl.exe: CMakeFiles\LearnOpengl.dir\Main.cpp.obj
+LearnOpengl.exe: CMakeFiles\LearnOpengl.dir\glad.c.obj
 LearnOpengl.exe: CMakeFiles\LearnOpengl.dir\build.make
 LearnOpengl.exe: ..\lib\glew32s.lib
 LearnOpengl.exe: ..\lib\glfw3.lib
 LearnOpengl.exe: ..\lib\SOIL.lib
+LearnOpengl.exe: ..\lib\assimp-vc140-mt.lib
 LearnOpengl.exe: CMakeFiles\LearnOpengl.dir\objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=I:\LearnOpengl\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable LearnOpengl.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\_GitSpace\LearnOpengl\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable LearnOpengl.exe"
 	"D:\Program Files\JetBrains\CLion 2020.1.1\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\LearnOpengl.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100177~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100177~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2017\PROFES~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\LearnOpengl.dir\objects1.rsp @<<
- /out:LearnOpengl.exe /implib:LearnOpengl.lib /pdb:I:\LearnOpengl\cmake-build-debug\LearnOpengl.pdb /version:0.0  /machine:X86 /debug /INCREMENTAL /subsystem:console  ..\lib\glew32s.lib ..\lib\glfw3.lib OpenGL32.lib ..\lib\SOIL.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
+ /out:LearnOpengl.exe /implib:LearnOpengl.lib /pdb:D:\_GitSpace\LearnOpengl\cmake-build-debug\LearnOpengl.pdb /version:0.0  /machine:X86 /debug /INCREMENTAL /subsystem:console  ..\lib\glew32s.lib ..\lib\glfw3.lib OpenGL32.lib ..\lib\SOIL.lib ..\lib\assimp-vc140-mt.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
 <<
 
 # Rule to build all files generated by this target.
@@ -108,6 +130,6 @@ CMakeFiles\LearnOpengl.dir\clean:
 .PHONY : CMakeFiles\LearnOpengl.dir\clean
 
 CMakeFiles\LearnOpengl.dir\depend:
-	$(CMAKE_COMMAND) -E cmake_depends "NMake Makefiles" I:\LearnOpengl I:\LearnOpengl I:\LearnOpengl\cmake-build-debug I:\LearnOpengl\cmake-build-debug I:\LearnOpengl\cmake-build-debug\CMakeFiles\LearnOpengl.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "NMake Makefiles" D:\_GitSpace\LearnOpengl D:\_GitSpace\LearnOpengl D:\_GitSpace\LearnOpengl\cmake-build-debug D:\_GitSpace\LearnOpengl\cmake-build-debug D:\_GitSpace\LearnOpengl\cmake-build-debug\CMakeFiles\LearnOpengl.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles\LearnOpengl.dir\depend
 

@@ -52,10 +52,10 @@ RM = "D:\Program Files\JetBrains\CLion 2020.1.1\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = I:\LearnOpengl
+CMAKE_SOURCE_DIR = D:\_GitSpace\LearnOpengl
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = I:\LearnOpengl\cmake-build-debug
+CMAKE_BINARY_DIR = D:\_GitSpace\LearnOpengl\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -84,9 +84,9 @@ rebuild_cache\fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start I:\LearnOpengl\cmake-build-debug\CMakeFiles I:\LearnOpengl\cmake-build-debug\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\_GitSpace\LearnOpengl\cmake-build-debug\CMakeFiles D:\_GitSpace\LearnOpengl\cmake-build-debug\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) all
-	$(CMAKE_COMMAND) -E cmake_progress_start I:\LearnOpengl\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\_GitSpace\LearnOpengl\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -127,32 +127,59 @@ LearnOpengl\fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\LearnOpengl.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\LearnOpengl.dir\build
 .PHONY : LearnOpengl\fast
 
-main.obj: main.cpp.obj
+Main.obj: Main.cpp.obj
 
-.PHONY : main.obj
+.PHONY : Main.obj
 
 # target to build an object file
-main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LearnOpengl.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\LearnOpengl.dir\main.cpp.obj
-.PHONY : main.cpp.obj
+Main.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LearnOpengl.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\LearnOpengl.dir\Main.cpp.obj
+.PHONY : Main.cpp.obj
 
-main.i: main.cpp.i
+Main.i: Main.cpp.i
 
-.PHONY : main.i
+.PHONY : Main.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LearnOpengl.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\LearnOpengl.dir\main.cpp.i
-.PHONY : main.cpp.i
+Main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LearnOpengl.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\LearnOpengl.dir\Main.cpp.i
+.PHONY : Main.cpp.i
 
-main.s: main.cpp.s
+Main.s: Main.cpp.s
 
-.PHONY : main.s
+.PHONY : Main.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LearnOpengl.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\LearnOpengl.dir\main.cpp.s
-.PHONY : main.cpp.s
+Main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LearnOpengl.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\LearnOpengl.dir\Main.cpp.s
+.PHONY : Main.cpp.s
+
+glad.obj: glad.c.obj
+
+.PHONY : glad.obj
+
+# target to build an object file
+glad.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LearnOpengl.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\LearnOpengl.dir\glad.c.obj
+.PHONY : glad.c.obj
+
+glad.i: glad.c.i
+
+.PHONY : glad.i
+
+# target to preprocess a source file
+glad.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LearnOpengl.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\LearnOpengl.dir\glad.c.i
+.PHONY : glad.c.i
+
+glad.s: glad.c.s
+
+.PHONY : glad.s
+
+# target to generate assembly for a file
+glad.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LearnOpengl.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\LearnOpengl.dir\glad.c.s
+.PHONY : glad.c.s
 
 # Help Target
 help:
@@ -163,9 +190,12 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... LearnOpengl
-	@echo ... main.obj
-	@echo ... main.i
-	@echo ... main.s
+	@echo ... Main.obj
+	@echo ... Main.i
+	@echo ... Main.s
+	@echo ... glad.obj
+	@echo ... glad.i
+	@echo ... glad.s
 .PHONY : help
 
 

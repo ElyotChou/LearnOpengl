@@ -1,4 +1,4 @@
-# Install script for directory: I:/LearnOpengl
+# Install script for directory: D:/_GitSpace/LearnOpengl
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "I:/LearnOpengl/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "D:/_GitSpace/LearnOpengl/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -8,23 +8,23 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="I:/LearnOpengl/cmake-build-debug"/>
+				<Option working_dir="D:/_GitSpace/LearnOpengl/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f I:\LearnOpengl\cmake-build-debug\Makefile VERBOSE=1 all"/>
-					<CompileFile command="nmake /NOLOGO /f I:\LearnOpengl\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f I:\LearnOpengl\cmake-build-debug\Makefile VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f I:\LearnOpengl\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f D:\_GitSpace\LearnOpengl\cmake-build-debug\Makefile VERBOSE=1 all"/>
+					<CompileFile command="nmake /NOLOGO /f D:\_GitSpace\LearnOpengl\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f D:\_GitSpace\LearnOpengl\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f D:\_GitSpace\LearnOpengl\cmake-build-debug\Makefile VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="LearnOpengl">
-				<Option output="I:/LearnOpengl/cmake-build-debug/LearnOpengl.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="I:/LearnOpengl/cmake-build-debug"/>
+				<Option output="D:/_GitSpace/LearnOpengl/cmake-build-debug/LearnOpengl.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/_GitSpace/LearnOpengl/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="msvc8"/>
 				<Compiler>
-					<Add directory="I:/LearnOpengl/include"/>
+					<Add directory="D:/_GitSpace/LearnOpengl/include"/>
 					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Tools\MSVC\14.16.27023\ATLMFC\include"/>
 					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Tools\MSVC\14.16.27023\include"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um"/>
@@ -35,20 +35,20 @@
 					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\cppwinrt"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f I:\LearnOpengl\cmake-build-debug\Makefile VERBOSE=1 LearnOpengl"/>
-					<CompileFile command="nmake /NOLOGO /f I:\LearnOpengl\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f I:\LearnOpengl\cmake-build-debug\Makefile VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f I:\LearnOpengl\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f D:\_GitSpace\LearnOpengl\cmake-build-debug\Makefile VERBOSE=1 LearnOpengl"/>
+					<CompileFile command="nmake /NOLOGO /f D:\_GitSpace\LearnOpengl\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f D:\_GitSpace\LearnOpengl\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f D:\_GitSpace\LearnOpengl\cmake-build-debug\Makefile VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="LearnOpengl/fast">
-				<Option output="I:/LearnOpengl/cmake-build-debug/LearnOpengl.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="I:/LearnOpengl/cmake-build-debug"/>
+				<Option output="D:/_GitSpace/LearnOpengl/cmake-build-debug/LearnOpengl.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/_GitSpace/LearnOpengl/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="msvc8"/>
 				<Compiler>
-					<Add directory="I:/LearnOpengl/include"/>
+					<Add directory="D:/_GitSpace/LearnOpengl/include"/>
 					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Tools\MSVC\14.16.27023\ATLMFC\include"/>
 					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Tools\MSVC\14.16.27023\include"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um"/>
@@ -59,40 +59,55 @@
 					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\cppwinrt"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f I:\LearnOpengl\cmake-build-debug\Makefile VERBOSE=1 LearnOpengl/fast"/>
-					<CompileFile command="nmake /NOLOGO /f I:\LearnOpengl\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f I:\LearnOpengl\cmake-build-debug\Makefile VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f I:\LearnOpengl\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f D:\_GitSpace\LearnOpengl\cmake-build-debug\Makefile VERBOSE=1 LearnOpengl/fast"/>
+					<CompileFile command="nmake /NOLOGO /f D:\_GitSpace\LearnOpengl\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f D:\_GitSpace\LearnOpengl\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f D:\_GitSpace\LearnOpengl\cmake-build-debug\Makefile VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="I:/LearnOpengl/cmake-build-debug"/>
+				<Option working_dir="D:/_GitSpace/LearnOpengl/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f I:\LearnOpengl\cmake-build-debug\Makefile VERBOSE=1 edit_cache"/>
-					<CompileFile command="nmake /NOLOGO /f I:\LearnOpengl\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f I:\LearnOpengl\cmake-build-debug\Makefile VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f I:\LearnOpengl\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f D:\_GitSpace\LearnOpengl\cmake-build-debug\Makefile VERBOSE=1 edit_cache"/>
+					<CompileFile command="nmake /NOLOGO /f D:\_GitSpace\LearnOpengl\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f D:\_GitSpace\LearnOpengl\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f D:\_GitSpace\LearnOpengl\cmake-build-debug\Makefile VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="I:/LearnOpengl/cmake-build-debug"/>
+				<Option working_dir="D:/_GitSpace/LearnOpengl/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f I:\LearnOpengl\cmake-build-debug\Makefile VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="nmake /NOLOGO /f I:\LearnOpengl\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f I:\LearnOpengl\cmake-build-debug\Makefile VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f I:\LearnOpengl\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f D:\_GitSpace\LearnOpengl\cmake-build-debug\Makefile VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="nmake /NOLOGO /f D:\_GitSpace\LearnOpengl\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f D:\_GitSpace\LearnOpengl\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f D:\_GitSpace\LearnOpengl\cmake-build-debug\Makefile VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="I:/LearnOpengl/Shader.h">
+		<Unit filename="D:/_GitSpace/LearnOpengl/Main.cpp">
 			<Option target="LearnOpengl"/>
 		</Unit>
-		<Unit filename="I:/LearnOpengl/main.cpp">
+		<Unit filename="D:/_GitSpace/LearnOpengl/ModelDrawer/camera.h">
 			<Option target="LearnOpengl"/>
 		</Unit>
-		<Unit filename="I:/LearnOpengl/CMakeLists.txt">
+		<Unit filename="D:/_GitSpace/LearnOpengl/ModelDrawer/mesh.h">
+			<Option target="LearnOpengl"/>
+		</Unit>
+		<Unit filename="D:/_GitSpace/LearnOpengl/ModelDrawer/model.h">
+			<Option target="LearnOpengl"/>
+		</Unit>
+		<Unit filename="D:/_GitSpace/LearnOpengl/ModelDrawer/shader_m.h">
+			<Option target="LearnOpengl"/>
+		</Unit>
+		<Unit filename="D:/_GitSpace/LearnOpengl/glad.c">
+			<Option target="LearnOpengl"/>
+		</Unit>
+		<Unit filename="D:/_GitSpace/LearnOpengl/stb_image.h">
+			<Option target="LearnOpengl"/>
+		</Unit>
+		<Unit filename="D:/_GitSpace/LearnOpengl/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>
